@@ -107,5 +107,5 @@ export function sleep(ms: number): Promise<void> {
  * Check if running in development mode
  */
 export function isDev(): boolean {
-  return import.meta.env.DEV;
+  return (import.meta as any).env?.DEV ?? false;
 }

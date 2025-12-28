@@ -7,8 +7,9 @@
 import { ChatRequest, StreamChunk, Document, Session, HealthStatus, TranscriptionResult } from '@/types';
 
 // Use environment variable for API base URL, fallback to relative path for local dev
-const API_BASE = import.meta.env.VITE_API_URL 
-  ? `${import.meta.env.VITE_API_URL}/api/v1`
+const env = (import.meta as any).env || {};
+const API_BASE = env.VITE_API_URL 
+  ? `${env.VITE_API_URL}/api/v1`
   : '/api/v1';
 
 class ApiError extends Error {

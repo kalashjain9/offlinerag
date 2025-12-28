@@ -9,13 +9,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Plus, 
   MessageSquare, 
-  Trash2, 
-  Settings, 
-  Moon, 
-  Sun,
+  Trash2,
   ChevronLeft,
-  ChevronRight,
-  Loader2
+  ChevronRight
 } from 'lucide-react';
 import { useChatStore } from '@/store/chatStore';
 import { clsx } from 'clsx';
@@ -32,7 +28,6 @@ export default function Sidebar() {
     selectSession,
     deleteSession,
     toggleSidebar,
-    toggleDarkMode,
   } = useChatStore();
 
   const [hoveredSession, setHoveredSession] = useState<string | null>(null);

@@ -13,7 +13,7 @@ import ChatInput from './ChatInput';
 import WelcomeScreen from './WelcomeScreen';
 
 export default function ChatArea() {
-  const { messages, isGenerating, sidebarOpen, darkMode } = useChatStore();
+  const { messages, isGenerating, darkMode } = useChatStore();
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [showScrollButton, setShowScrollButton] = useState(false);
