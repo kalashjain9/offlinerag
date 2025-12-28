@@ -1,0 +1,38 @@
+# ============================================
+# OfflineRAG Git Ignore
+# ============================================
+
+# Python
+backend/__pycache__/
+backend/*.py[cod]
+backend/venv/
+backend/data/
+backend/models/
+backend/temp/
+backend/.env
+
+# Node.js
+frontend/node_modules/
+frontend/dist/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large model files
+*.gguf
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.onnx
+
+# Logs
+*.log
+logs/

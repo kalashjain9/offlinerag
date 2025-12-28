@@ -1,0 +1,22 @@
+# Render.com deployment configuration
+services:
+  - type: web
+    name: offlinerag-backend
+    env: docker
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: DEBUG
+        value: "false"
+      - key: OLLAMA_HOST
+        sync: false  # Set in dashboard
+      - key: CORS_ORIGINS
+        sync: false  # Set in dashboard
+      - key: DATA_DIR
+        value: /app/data
+      - key: WHISPER_MODEL
+        value: base
+    disk:
+      name: rag-data
+      mountPath: /app/data
+      sizeGB: 10
